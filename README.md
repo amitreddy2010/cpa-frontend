@@ -45,13 +45,9 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-# cpa-frontend
+# cpa-frontend - setup
 
-cpa frontend in react
-
-# Setup
-
-## React typescript template
+## React typescript template (done)
 
 > reference: https://medium.com/codex/typescript-and-create-react-app-11bdebcbf763
 
@@ -59,14 +55,29 @@ cpa frontend in react
 npx create-react-app my-app --template typescript
 ```
 
-## Github
+## Github (done)
 
 > git clone https://github.com/amitreddy2010/cpa-frontend.git
 > git remote add origin https://github.com/amitreddy2010/cpa-frontend.git
 
 Connect to github via sourcetree(setting>account) or vscode (push upstream or output). We can push the code once we connect.
 
-## mswjs
+## env files
+> npm install --save-dev env-cmd
+```
+    "start": "env-cmd -f .env react-scripts start",
+```
+* The variable names must start with prefix "REACT_APP*"
+* Can access the variable using {process.env.NODE_ENV} etc.
+
+## Routes
+## mswjs 4379
+
+## ThemeProvider & global style 4300
+
+## run scripts
+
+## internationalization 4300
 
 ## linters - Eslint
 
@@ -103,3 +114,4 @@ set -e
 npm run pretest
 
 ## jest runner
+
