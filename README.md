@@ -57,29 +57,52 @@ npx create-react-app my-app --template typescript
 
 ## Github (done)
 
+via terminal
+
 > git clone https://github.com/amitreddy2010/cpa-frontend.git
 > git remote add origin https://github.com/amitreddy2010/cpa-frontend.git
+
+> git remote set-url origin https://github.com/amitreddy2010/cpa-frontend.git
+> git push --set-upstream origin feature/integration
 
 Connect to github via sourcetree(setting>account) or vscode (push upstream or output). We can push the code once we connect.
 
 ## env files
+
 > npm install --save-dev env-cmd
+
 ```
     "start": "env-cmd -f .env react-scripts start",
 ```
-* The variable names must start with prefix "REACT_APP*"
-* Can access the variable using {process.env.NODE_ENV} etc.
+
+- The variable names must start with prefix "REACT_APP\*"
+- Can access the variable using {process.env.NODE_ENV} etc.
 
 ## Routes
+
 ## mswjs 4379
+
+mswjs documentation
+turorial reference : https://codeburst.io/configuring-mock-service-worker-msw-c62c9d9e4a6a
+youtube reference : https://www.youtube.com/watch?v=V-CKjACOfmc&t=4s
+
+```
+npx msw init ./public
+```
 
 ## ThemeProvider & global style 4300
 
 ## run scripts
 
+> build start test lint prepush husky analyze clean
+
 ## internationalization 4300
 
 ## linters - Eslint
+
+```
+"lint": "npm run prittier:write && npm run prittier:check && npm run lint:css && npm run lint:ts && npm run ts:check
+```
 
 > reference : https://medium.com/the-node-js-collection/why-and-how-to-use-eslint-in-your-project-742d0bc61ed7
 
@@ -115,3 +138,6 @@ npm run pretest
 
 ## jest runner
 
+## React-form-hook
+
+## Atom
