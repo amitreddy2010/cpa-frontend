@@ -6,13 +6,11 @@ type Review = {
 }
 
 const fetechReviews = async () => {
-  console.log('reviews data')
   const response = await fetch(`${process.env.REACT_APP_API_ENDPOINT}/reviews`)
   if (!response.ok) {
     throw Error('Failure in fetching reviews')
   }
   const reviewData: Review[] = await response.json()
-  console.log(typeof reviewData)
   return reviewData
 }
 

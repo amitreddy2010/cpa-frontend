@@ -55,6 +55,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 npx create-react-app my-app --template typescript
 ```
 
+> reference: https://stackoverflow.com/questions/49746638/how-to-use-enum-as-props-in-react-typescript
+
 ## Github (done)
 
 via terminal
@@ -67,7 +69,7 @@ via terminal
 
 Connect to github via sourcetree(setting>account) or vscode (push upstream or output). We can push the code once we connect.
 
-## env files
+## env files (done)
 
 > npm install --save-dev env-cmd
 
@@ -78,9 +80,11 @@ Connect to github via sourcetree(setting>account) or vscode (push upstream or ou
 - The variable names must start with prefix "REACT_APP\*"
 - Can access the variable using {process.env.NODE_ENV} etc.
 
-## Routes
+## Routes (done)
 
-## mswjs 4379
+React-dom-router vs @types/React-dom-router (added both to make it work)
+
+## mswjs 4379 (done)
 
 mswjs documentation
 turorial reference : https://codeburst.io/configuring-mock-service-worker-msw-c62c9d9e4a6a
@@ -100,44 +104,43 @@ npx msw init ./public
 
 ## linters - Eslint
 
+> reference for prettier : https://moduscreate.com/blog/lint-style-typescript/
 ```
 "lint": "npm run prittier:write && npm run prittier:check && npm run lint:css && npm run lint:ts && npm run ts:check
 ```
 
 > reference : https://medium.com/the-node-js-collection/why-and-how-to-use-eslint-in-your-project-742d0bc61ed7
 
-```
-npm install --save-dev eslint eslint-config-strongloop
-echo '{"extends": "strongloop"}' > .eslintrc.json
-echo node_modules/ >> .gitignore
-```
 
-Add pretest script in package.json :
 
-```
-{
-    ...
-    "scripts": {
-        "pretest": "eslint --ignore-path .gitignore ."
-    }
-    ...
+
+## Husky pre commit linters 
+"husky": {
+  "hooks": {
+    "pre-commit": "CI=true npm run test",
+  }
 }
-```
-
-```
-git add package.json .gitignore .eslintrc.json
-git commit -m 'Add eslint automation'
-npm run pretest
-```
-
-Pre-commit:
-cp .git/hooks/pre-commit.sample .git/hooks/pre-commit
-Add at last:
-set -e
-npm run pretest
 
 ## jest runner
+
+> npm test -- --coverage
+> keywords : it, test, describe, xit, fit, screen.getByText().toBeInTheDocument()
+
+```
+npm install --save @react-testing/jest-dom @react-testing/react
+```
+
+To avoid boilerpate & use react-dom in all tests we can
+
+> import '@react-testing/jest-dom'
+
+For each test:
+import {getByText,screen} from '@react-testing/react'
 
 ## React-form-hook
 
 ## Atom
+
+## Concepts
+
+- Lazy fetch of components - refer App.tsx

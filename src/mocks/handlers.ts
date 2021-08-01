@@ -16,7 +16,7 @@ export const handlers = [
   rest.get(
     `${process.env.REACT_APP_API_ENDPOINT}/reviews`,
     (_req, res, ctx) => {
-      console.log('Reviews called')
+      // console.log('Reviews called')
       // Check if the user is authenticated in this session
       // const isAuthenticated = sessionStorage.getItem('is-authenticated')
       // if (!isAuthenticated) {

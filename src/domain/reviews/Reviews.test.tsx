@@ -11,4 +11,14 @@ describe('Reviews', () => {
       expect(screen.getByText('Reviews Loaded :')).toBeInTheDocument()
     })
   })
+
+  it('fetch reviews error', async () => {
+    render(<Reviews />)
+
+    expect(screen.getByText('Loading')).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(screen.getByText('Reviews Loaded :')).toBeInTheDocument()
+    })
+  })
 })
