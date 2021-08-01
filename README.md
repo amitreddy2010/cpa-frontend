@@ -105,21 +105,23 @@ npx msw init ./public
 ## linters - Eslint
 
 > reference for prettier : https://moduscreate.com/blog/lint-style-typescript/
+
 ```
 "lint": "npm run prittier:write && npm run prittier:check && npm run lint:css && npm run lint:ts && npm run ts:check
 ```
 
 > reference : https://medium.com/the-node-js-collection/why-and-how-to-use-eslint-in-your-project-742d0bc61ed7
 
+## Husky pre commit linters
 
-
-
-## Husky pre commit linters 
 "husky": {
-  "hooks": {
-    "pre-commit": "CI=true npm run test",
-  }
+"hooks": {
+"pre-commit": "CI=true npm run test",
 }
+}
+
+npm uninstall husky
+npm install -D husky@4
 
 ## jest runner
 
