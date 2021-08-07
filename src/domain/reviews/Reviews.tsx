@@ -14,14 +14,13 @@ const fetechReviews = async () => {
   return reviewData
 }
 
-const Reviews = () => {
+const Reviews = (): JSX.Element => {
   const [status, setstatus] = useState('Loading')
   const [reviews, setreviews] = useState<Review[]>([])
 
   useEffect(() => {
     fetechReviews()
       .then((reviewsList) => {
-        console.log(reviews)
         setreviews(reviewsList)
         setstatus('Success')
       })

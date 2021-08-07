@@ -10,7 +10,7 @@
       "plugin:@typescript-eslint/recommended"
     ],
     "rules": { 
-        "no-console": 2, // Remember, this means error!
+        "no-console": 1, // Remember, 2 means error!
         "@typescript-eslint/indent": ["error", 2],
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error"
