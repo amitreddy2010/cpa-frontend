@@ -29,8 +29,6 @@ const ContactUs = (): JSX.Element => {
     setContact(data)
   }
 
-  console.log(errors)
-
   useEffect(() => {
     console.log(contact)
   }, [contact])

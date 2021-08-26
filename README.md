@@ -129,7 +129,7 @@ npm install -D husky@4
 > keywords : it, test, describe, xit, fit, screen.getByText().toBeInTheDocument()
 
 ```
-npm install --save @react-testing/jest-dom @react-testing/react
+npm install --save @react-testing/jest-dom @testing-library/react
 ```
 
 To avoid boilerpate & use react-dom in all tests we can
@@ -137,7 +137,9 @@ To avoid boilerpate & use react-dom in all tests we can
 > import '@react-testing/jest-dom'
 
 For each test:
-import {getByText,screen} from '@react-testing/react'
+import {getByText,screen} from '@testing-library/react'
+
+test/app-test-utils -> for integration tests
 
 ## React-form-hook
 
@@ -145,4 +147,19 @@ import {getByText,screen} from '@react-testing/react'
 
 ## Concepts
 
-- Lazy fetch of components - refer App.tsx
+- Lazy fetch of components - refer App.tsx in fulfilment
+  Lazy load of routes:
+  Const propose = lazy(() => import(‘../apply’))
+
+# Implementation UI design
+
+- Use font awesome (setup by adding in index.html)
+- Links to be bound inside the Router
+- @styledComponents via npm
+
+# Issues faced during development
+
+- mswjs for local development , need to add script file as mentioned in documentation
+- styled components typescript .styled.ts
+- husky precommit hook need to install husky@4 (version 4)
+- useref gives only reference , can access via .current, does not rerender dom
